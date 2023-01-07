@@ -1,6 +1,7 @@
 package github.plainsvillager.toolbox;
 
 import github.plainsvillager.toolbox.coin_tossing.CoinTossing;
+import github.plainsvillager.toolbox.minecraft_tool.auto_gen_item_code.AutoGenItemCode;
 
 import java.util.Scanner;
 
@@ -11,8 +12,8 @@ import java.util.Scanner;
  * @since 1.14514
  */
 public class Main {
-    public static final String VERSION = "0.1";
-    static Scanner sc = new Scanner(System.in); // 扫描输入
+    public static final String VERSION = "0.2";
+    public static Scanner sc = new Scanner(System.in); // 扫描输入
 
 
     public static void main(String[] args) throws Exception {
@@ -26,6 +27,9 @@ public class Main {
                     for (int i = 0; i < times; i++) {
                         System.out.println(new CoinTossing().getIs());
                     }
+                }
+                case 2 -> {
+                    AutoGenItemCode.Init.init();
                 }
                 case 114514 -> throw new Exception("这个数字好臭啊，程序臭死退出力！（悲）");
                 default -> throw new IllegalStateException("Unexpected value: " + choice);
