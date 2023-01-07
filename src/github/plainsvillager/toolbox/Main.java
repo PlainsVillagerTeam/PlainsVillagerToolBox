@@ -15,7 +15,12 @@ public class Main {
     public static final String VERSION = "0.2";
     public static Scanner sc = new Scanner(System.in); // 扫描输入
 
-
+    /**
+     * <h2>主方法</h2>
+     * @param args
+     * @throws Exception 退出
+     * @throws IllegalStateException 非选项
+     */
     public static void main(String[] args) throws Exception {
         welcome();
         while (true) {
@@ -28,15 +33,17 @@ public class Main {
                         System.out.println(new CoinTossing().getIs());
                     }
                 }
-                case 2 -> {
-                    AutoGenItemCode.Init.init();
-                }
+                case 2 -> AutoGenItemCode.Init.init();
                 case 114514 -> throw new Exception("这个数字好臭啊，程序臭死退出力！（悲）");
                 default -> throw new IllegalStateException("Unexpected value: " + choice);
             }
+            System.out.println("如果继续，请继续输入选项！");
         }
     }
 
+    /**
+     * 欢迎方法
+     */
     private static void welcome() {
         System.out.println("欢迎来到村民工具箱，版本：" + VERSION);
         System.out.println("主页：https://github.com/PlainsVillager/PlainsVillagerToolBox");
