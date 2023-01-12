@@ -17,7 +17,7 @@ public class Main {
 
     /**
      * <h2>主方法</h2>
-     * @param args
+     * @param args main形参
      * @throws Exception 退出
      * @throws IllegalStateException 非选项
      */

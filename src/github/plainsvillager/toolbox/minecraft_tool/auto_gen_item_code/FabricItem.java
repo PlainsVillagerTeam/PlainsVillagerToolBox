@@ -36,19 +36,19 @@ public class FabricItem extends ModLoaderItem{
     }
 
     protected void fabricGen() {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
 
-        sb.append("public class ModMain implements ModInitializer {\n" +
+        stringBuilder.append("public class ModMain implements ModInitializer {\n" +
                 "\tpublic static final String MOD_ID =\"" + getNamespace() + "\";\n" +
                 "    public static final Logger LOGGER = LoggerFactory.getLogger(\"modid\");\n" +
                 "\n\tpublic static final Item " + getPath().toUpperCase() + " =  new Item(new FabricItemSettings()");
         switch (getFireProof()){
             case "Y" :
-                sb.append(".fireproof())");
+                stringBuilder.append(".fireproof())");
             default:
                 break;
         }
-        sb.append(";+"+
+        stringBuilder.append(";+"+
                 "\n" +
                 "\t@Override\n" +
                 "\tpublic void onInitialize() {\n" +
@@ -56,6 +56,6 @@ public class FabricItem extends ModLoaderItem{
                 "\t\tLOGGER.info(\"Hello Fabric world!\");\n" +
                 "\t}\n" +
                 "}");
-        System.out.println(sb);
+        System.out.println(stringBuilder);
     }
 }
