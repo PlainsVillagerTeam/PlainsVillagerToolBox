@@ -1,4 +1,4 @@
-package github.plainsvillager.toolbox.coin_tossing;
+package toolbox.coin_tossing;
 
 import java.util.Random;
 

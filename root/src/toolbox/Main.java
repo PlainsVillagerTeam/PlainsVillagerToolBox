@@ -1,7 +1,7 @@
-package github.plainsvillager.toolbox;
+package toolbox;
 
-import github.plainsvillager.toolbox.coin_tossing.CoinTossing;
-import github.plainsvillager.toolbox.minecraft_tool.auto_gen_item_code.AutoGenItemCode;
+import toolbox.coin_tossing.CoinTossing;
+import toolbox.minecraft_tool.auto_gen_item_code.AutoGenItemCode;
 
 import java.util.Scanner;
 

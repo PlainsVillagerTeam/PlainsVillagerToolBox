@@ -1,6 +1,6 @@
-package github.plainsvillager.toolbox.minecraft_tool.auto_gen_item_code;
+package toolbox.minecraft_tool.auto_gen_item_code;
 
-import github.plainsvillager.toolbox.Main;
+import toolbox.Main;
 
 import java.util.Scanner;
 

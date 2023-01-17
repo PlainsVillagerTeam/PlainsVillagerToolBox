@@ -1,4 +1,4 @@
-package github.plainsvillager.toolbox.minecraft_tool.auto_gen_item_code;
+package toolbox.minecraft_tool.auto_gen_item_code;
 
 public abstract class ModLoaderItem {
     private String namespace;
