@@ -22,23 +22,32 @@ public class Main {
      * @throws IllegalStateException 非选项
      */
     public static void main(String[] args) throws Exception {
-        welcome();
-        while (true) {
-            int choice = sc.nextInt(); //接收选择
-            switch (choice) {
-                case 1 -> {
-                    System.out.println("请输入抛硬币的次数");
-                    int times = sc.nextInt();
-                    for (int i = 0; i < times; i++) {
-                        System.out.println(new CoinTossing().getIs());
+
+        // 本来想用Runnable接口的
+        Thread welcomeThread = new Thread(Main::welcome);
+        welcomeThread.start();
+        // 现在线程死亡
+
+        Thread mainT = new Thread(()->{
+            while (true) {
+                int choice = sc.nextInt(); //接收选择
+                switch (choice) {
+                    case 1 -> {
+                        System.out.println("请输入抛硬币的次数");
+                        int times = sc.nextInt();
+                        for (int i = 0; i < times; i++) {
+                            System.out.println(new CoinTossing().getIs());
+                        }
                     }
+                    case 2 -> AutoGenItemCode.Init.init();
+                    case 114514 -> System.exit(0);
+                    default -> throw new IllegalStateException("Unexpected value: " + choice);
                 }
-                case 2 -> AutoGenItemCode.Init.init();
-                case 114514 -> throw new Exception("这个数字好臭啊，程序臭死退出力！（悲）");
-                default -> throw new IllegalStateException("Unexpected value: " + choice);
+                System.out.println("如果继续，请继续输入选项！");
             }
-            System.out.println("如果继续，请继续输入选项！");
-        }
+        });
+        mainT.start();
+
     }
 
     /**
