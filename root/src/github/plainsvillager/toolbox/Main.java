@@ -50,7 +50,7 @@ public class Main {
      */
     private static void welcome() {
         System.out.println("欢迎来到村民工具箱，版本：" + VERSION);
-        System.out.println("主页：https://github.com/PlainsVillager/PlainsVillagerToolBox");
+        System.out.println("主页：https://github.com/PlainsVillagerTeam/PlainsVillagerToolBox");
         System.out.println("贡献：fork后创建自己的特性分支或“feat_1”这种格式，并提交pull request");
         System.out.println("QQ群：214368462");
         System.out.println("选项：（请输入对应数字）");
