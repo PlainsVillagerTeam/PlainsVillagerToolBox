@@ -1,4 +1,6 @@
-package toolbox.coin_tossing;
+package github.plainsvillager.toolbox.coin_tossing;
+
+import github.plainsvillager.toolbox.ToolBoxVersion;
 
 import java.util.Random;
 
@@ -9,6 +11,7 @@ import java.util.Random;
  * @author PlainsVillager
  * @since 0.1
  */
+@ToolBoxVersion(value = "0.1")
 public class CoinTossing {
     private boolean is;
 

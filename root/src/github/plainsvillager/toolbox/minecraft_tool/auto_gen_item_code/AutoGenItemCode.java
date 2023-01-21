@@ -1,6 +1,7 @@
-package toolbox.minecraft_tool.auto_gen_item_code;
+package github.plainsvillager.toolbox.minecraft_tool.auto_gen_item_code;
 
-import toolbox.Main;
+import github.plainsvillager.toolbox.Main;
+import github.plainsvillager.toolbox.ToolBoxVersion;
 
 import java.util.Scanner;
 
@@ -9,6 +10,7 @@ import java.util.Scanner;
  *
  * @author PlainsVillager
  */
+@ToolBoxVersion(value = "0.3-beta.2")
 public class AutoGenItemCode {
     public static class Init {
         public static Scanner scI = Main.sc;
@@ -48,7 +50,7 @@ public class AutoGenItemCode {
             System.out.println("是否可燃（Y/N）");
             fabricItem.setFireProof(scI.next());
 
-            fabricItem.fabricGen();
+            fabricItem.generate();
         }
     }
 }

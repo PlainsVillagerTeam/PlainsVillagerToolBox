@@ -1,5 +1,9 @@
-package toolbox.minecraft_tool.auto_gen_item_code;
+package github.plainsvillager.toolbox.minecraft_tool.auto_gen_item_code;
 
+import github.plainsvillager.toolbox.ToolBoxVersion;
+
+
+@ToolBoxVersion(value = "0.3-beta.2")
 public abstract class ModLoaderItem {
     private String namespace;
     private String path;
@@ -37,4 +41,11 @@ public abstract class ModLoaderItem {
     public void setFireProof(String fireProof) {
         this.fireProof = fireProof;
     }
+
+    /**
+     * 创建方法，抽象，返回void
+     * @author PlainsVillager
+     * @see FabricItem#generate()
+     */
+    protected abstract void generate();
 }

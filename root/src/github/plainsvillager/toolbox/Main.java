@@ -1,7 +1,7 @@
-package toolbox;
+package github.plainsvillager.toolbox;
 
-import toolbox.coin_tossing.CoinTossing;
-import toolbox.minecraft_tool.auto_gen_item_code.AutoGenItemCode;
+import github.plainsvillager.toolbox.coin_tossing.CoinTossing;
+import github.plainsvillager.toolbox.minecraft_tool.auto_gen_item_code.AutoGenItemCode;
 
 import java.util.Scanner;
 
@@ -11,17 +11,12 @@ import java.util.Scanner;
  * @version 0.1
  * @since 1.14514
  */
+@ToolBoxVersion(value = "0.3-beta.2")
 public class Main {
-    public static final String VERSION = "0.2";
+    public static final String VERSION = "0.3-beta.2";
     public static Scanner sc = new Scanner(System.in); // 扫描输入
 
-    /**
-     * <h2>主方法</h2>
-     * @param args main形参
-     * @throws Exception 退出
-     * @throws IllegalStateException 非选项
-     */
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         // 本来想用Runnable接口的
         Thread welcomeThread = new Thread(Main::welcome);

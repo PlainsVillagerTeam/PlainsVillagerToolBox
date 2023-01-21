@@ -1,7 +1,9 @@
-package toolbox.minecraft_tool.auto_gen_item_code;
+package github.plainsvillager.toolbox.minecraft_tool.auto_gen_item_code;
 
+import github.plainsvillager.toolbox.ToolBoxVersion;
+
+@ToolBoxVersion(value = "0.3-beta.2")
 public class FabricItem extends ModLoaderItem{
-
 
     public FabricItem() {
         super();
@@ -35,7 +37,9 @@ public class FabricItem extends ModLoaderItem{
         super.setFireProof(fireProof);
     }
 
-    protected void fabricGen() {
+
+    @Override
+    protected void generate() {
         StringBuilder stringBuilder = new StringBuilder();
 
         stringBuilder.append("public class ModMain implements ModInitializer {\n" +
