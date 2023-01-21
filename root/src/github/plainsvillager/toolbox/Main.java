@@ -2,6 +2,7 @@ package github.plainsvillager.toolbox;
 
 import github.plainsvillager.toolbox.coin_tossing.CoinTossing;
 import github.plainsvillager.toolbox.minecraft_tool.auto_gen_item_code.AutoGenItemCode;
+import github.plainsvillager.toolbox.useless.输出;
 
 import java.util.Scanner;
 
@@ -57,6 +58,7 @@ public class Main {
         System.out.println("【1】：抛硬币——可以在你犹豫不决时做出选择");
         System.out.println("【2】：Minecraft工具：根据对应MC版本自动生成一个物品的代码，不同类之间使用===========号间隔");
         System.out.println("【3】：查车牌号归属地");
+        输出.打印换行("没主意了来个点子罢");
         System.out.println("更多功能逐渐开发中！");
         System.out.println("【114514】：“优雅地”退出程序");
     }

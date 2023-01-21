@@ -13,7 +13,7 @@ import java.util.Scanner;
 @ToolBoxVersion(value = "0.3-beta.2")
 public class AutoGenItemCode {
     public static class Init {
-        public static Scanner scI = Main.sc;
+        protected static Scanner scI = Main.sc;
 
         public static void init() {
             System.out.println("根据对应MC版本自动生成一个物品的代码");
